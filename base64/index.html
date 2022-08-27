@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Base64</title>
+	</head>
+	<body>
+		<h1 class="rt">Base64</h1>
+		<div class="main">
+			<div class="one">
+				<h1>ENCODER</h1>
+			</div>
+			<div class="two">
+				<label>Enter a string here</label>
+				<input type="text" name="char" id="encode" />
+				<button class="button button1" onclick="Encode()">Encode</button>
+			</div>
+			<div class="three">
+				<label>output:-</label><br>
+				<h1 id="Encans"></h1>
+			</div>
+
+			<div class="four">
+				<h1>DECODER</h1>
+			</div>
+			<div class="five">
+				<label>Enter a string here</label>
+				<input type="text" name="char" id="decode" />
+				<button class="button button2" onclick="Decode()">Decode</button>
+			</div>
+			<div class="six">
+				<label>output:-</label><br>
+				<h1 id="Decans"></h1>
+			</div>
+		</div>
+	</body>
+	<script src="Encoding.js"></script>
+	<script src="Decoding.js"></script>
+</html>
