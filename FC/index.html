@@ -6,6 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Font Converter</title>
 		<link rel="stylesheet" href="style.css" />
+		<style>
+			@font-face {
+				font-family: unsteady-oversteer;
+				src: url(./unsteady\ oversteer.ttf);
+			}
+		</style>
 	</head>
 	<body>
 		<div class="main2">
@@ -16,10 +22,11 @@
 						<div class="left">
 							<form onsubmit="changeFont(event)">
 								<p><label for="headlable">Enter your Text Here : </label></p>
-								<textarea id="textinput" name="textinput"> </textarea
-								><br />
+								<textarea id="textinput" name="textinput"> </textarea><br />
 
 								<select name="fonts" id="fonts">
+									<option value="unsteady-oversteer">Unsteady Oversteer</option>
+
 									<option value="'Aboreto', cursive">Aboreto</option>
 									<option value="'Berkshire Swash', cursive">
 										Berkshire Swash
