@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+  }
+
+  h1{
+    text-align: start;
+  }
+  
+  table {
+    border: 2px solid rgb(255, 255, 255);
+    margin: 5px;
+  }
+  td {
+    border: 1px solid rgb(255, 255, 255);
+    height: 55px;
+    width: 55px;
+    font-size: x-large;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    td {
+      height: 30px;
+      width: 30px;
+      font-size: large;
+    }
+  }
