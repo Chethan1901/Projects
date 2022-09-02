@@ -10,27 +10,40 @@
     <label>username</label>
     <input id="inputext"><br>
     <label>attempts</label>
-    <input type="text" id ="attempts" pattern= "[0-9]" maxlength="1"><br>
-    <button onclick="load()">submit</button>
+    <input type="number" id ="attempts" pattern= "[0-9]" maxlength="1"><br>
+    <button onclick="load()">load</button><br>
+    <button onclick="reload()">reload</button><br>
+    <button onclick="sort()">sort</button><br>
+
+    
+    <!-- <textarea id="output" rows="10" cols="50" ></textarea> -->
 </body>
-<!-- <script src = "array.js"></script> -->
+
 <script>
 
-function load() {
+function load(){
+    let name = document.getElementById("inputext").value
+    let attempts = document.getElementById("attempts").value
 
-    // localStorage.setItem("lastname", "Smith");
-    let board = {
-        username: document.getElementById("inputext").value,
-        attempts: document.getElementById("attempts").value
-    }
-    localStorage.setItem('username', JSON.stringify(board));
-
-var retrievedObject = localStorage.getItem('board');
-
-console.log('Value of retrievedObject: ' + retrievedObject);
-console.log(board)
+    localStorage.setItem(name,attempts)
 }
 
+function reload(){
+
+    // let output =  localStorage.getItem("name")
+    let output =  Object(localStorage) 
+
+    console.log(output)
+    232510350
+    let empty = [];
+for (var attempt in output) {
+    sortable.push([attempt, output[attempt]]);
+}
+
+sortable.sort(function(a, b) {
+    console.log(a[1] - b[1]) 
+});
+}
 
 </script>
 </html>
