@@ -90,27 +90,30 @@
 
 
 
-var object = { '232510350': 672,
-'232510352': 672,
-'232510353': 672,
-'232510356': 672,
-'232510358': 672,
-'232510359': 672,
-'232510360': 672 }
+// var object = { '232510350': 672,
+// '232510352': 672,
+// '232510353': 672,
+// '232510356': 672,
+// '232510358': 672,
+// '232510359': 672,
+// '232510360': 672 }
 
-var values = Object.values(object);
-var final = [];
-var counter = 0;
-var portion = {};
+// var values = Object.values(object);
+// var final = [];
+// var counter = 0;
+// var portion = {};
 
-for (var key in object) {
-  if (counter !== 0 && counter % 3 === 0) {
-    final.push(portion);
-    portion = {};
-  }
-  portion[key] = values[counter];
-  counter++
-}
-final.push(portion);
+// for (var key in object) {
+//   if (counter !== 0 && counter % 3 === 0) {
+//     final.push(portion);
+//     portion = {};
+//   }
+//   portion[key] = values[counter];
+//   counter++
+// }
+// final.push(portion);
 
-console.log(final)
+// console.log(final)
+
+
+

@@ -8,9 +8,9 @@
 </head>
 <body>
     <label>username</label>
-    <input id="inputext"><br>
+    <input type="" id="inputext"  required><br>
     <label>attempts</label>
-    <input type="number" id ="attempts" pattern= "[0-9]" maxlength="1"><br>
+    <input c id ="attempts" pattern= "[0-9]" maxlength="1" required><br>
     <button onclick="load()">load</button><br>
     <button onclick="reload()">reload</button><br>
     <button onclick="sort()">sort</button><br>
@@ -21,29 +21,34 @@
 
 <script>
 
+let arr =[]
+
 function load(){
-    let name = document.getElementById("inputext").value
+    let Pname = document.getElementById("inputext").value
     let attempts = document.getElementById("attempts").value
 
-    localStorage.setItem(name,attempts)
+    let obj = {
+        name : Pname,
+        attempt : attempts
+    }
+
+
+    console.log(obj)
+    localStorage.setItem("winners",JSON.stringify(obj))
+
+    let get = localStorage.getItem("winners")
+arr.push(get)
+console.log(arr)
 }
 
-function reload(){
 
-    // let output =  localStorage.getItem("name")
-    let output =  Object(localStorage) 
 
-    console.log(output)
-    232510350
-    let empty = [];
-for (var attempt in output) {
-    sortable.push([attempt, output[attempt]]);
-}
-
-sortable.sort(function(a, b) {
-    console.log(a[1] - b[1]) 
-});
-}
+// function sort(){
+// let arrange = []
+// for(i = 0 ; i<arr.length ; i++){
+//     sort.push(arr[i])
+// }
+// }
 
 </script>
 </html>
